@@ -1,0 +1,252 @@
+*{
+    padding: 0px;
+    margin: 0px;
+} 
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  body {
+    margin: 0;
+  } 
+main{
+    display: block;
+}
+body header 
+{
+    background-color: #415e9b;
+    height: 42px;
+}
+.image
+{
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 0px;
+    background-color: #415e9b;
+}
+.search-bar input
+{
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 20px;
+    width:400px;
+}
+.align {
+    margin-left: 100px;
+    color:#133783;
+}
+body header span .profilepic{
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.user-id a b button{
+    margin-top: 12px;
+    margin-left: 100px;
+    background-color: #133783;
+}
+.home a b:hover{
+    margin-top: 12px;
+    margin-left: 100px;
+    background-color: #133783;
+}
+.create a b:hover{
+    margin-top: 12px;
+    margin-left: 100px;
+    background-color: #133783;
+}
+header .friendreq {
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    background-color: #133783;
+}
+header .messenger{
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    background-color: #133783;
+}  
+header .notification {
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    background-color: #133783;
+}   
+.icons{
+    margin-top: 50px;
+}
+.container{
+    background-color: #e9ebee;
+}
+            .card-0
+            {
+             margin-top: 15px;
+             height:120px;
+             width:500px;
+             margin-left: 350px;
+             text-transform: initial; 
+             background-color: #f5f6f7;
+            } 
+            .card-0 textarea{
+                margin-top: 10px;
+            }
+            .card-1
+            {
+             margin-top: 15px;
+             height:350px;
+             width:500px;
+             margin-left: 350px;
+             justify-content: space-between;
+            background-color: #fff;
+            }              
+            .card-1 .like{
+                margin-top: 20px;
+                border-radius: 15%; 
+                margin-left: 30px;
+                background-color: white;
+              
+            }  
+            .card-1 .comment{
+                margin-top: 20px;
+                border-radius: 15%; 
+                margin-left: 100px;
+                background-color: white;
+            }  
+            .card-1 .share{
+                margin-top: 20px;
+                border-radius: 15%; 
+                margin-left: 100px;
+                background-color: white;
+            }               
+.card-2 {
+ margin-top: 15px;
+ height:350px;
+ width:500px;
+ margin-left: 350px;
+ justify-content: space-between;
+ background-color:#fff;
+ }
+ .card-2 .card1 .img1{
+     height: 350px;
+     width: 500px;
+    background-color: #e9ebee;
+
+}
+ .card-2 .like{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 30px;
+    background-color: white;
+  
+}  
+.card-2 .comment{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+}  
+.card-2 .share{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+}
+
+.card-3
+{
+ height:350px;
+ width:500px;
+ margin-left: 350px;
+ justify-content: space-between;
+ background-color:#fff;
+ margin-top: 15px;
+}
+.card-3 .card2 .img2{
+    height:350px;
+    width:500px;    
+    background-color: #e9ebee;
+}
+.card-3 .like{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 30px;
+    background-color: white;
+}  
+.card-3 .comment{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+}  
+.card-3 .share{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+} 
+.card-4
+{
+ height:350px;
+ width:500px;
+ margin-left: 350px;
+ justify-content: space-between;
+ background-color:#fff;
+ margin-top: 0px;
+}
+.card-4 .card3 .img4{
+    height:350px;
+    width:500px;    
+    background-color: #e9ebee;
+}
+.card-4 .like{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 30px;
+    background-color: white;
+}  
+.card-4 .comment{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+}  
+.card-4 .share{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+} 
+.card-5
+{
+ height:500px;
+ width:500px;
+ margin-left: 350px;
+ justify-content: space-between;
+ background-color:#fff;
+ margin-top: 0px;
+}
+.card-5 .card4 .img5{
+    height:350px;
+    width:500px; 
+    background-color: #e9ebee;   
+
+}
+.card-5 .like{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 30px;
+    background-color: white;
+}  
+.card-5 .comment{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+}  
+.card-5 .share{
+    margin-top: 20px;
+    border-radius: 15%; 
+    margin-left: 100px;
+    background-color: white;
+} 
