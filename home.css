@@ -1,0 +1,76 @@
+*{
+    padding: 0px;
+    margin: 0px;
+} 
+.container{
+    background-color: #e9ebee;
+}
+            .card-0
+            {
+             margin-top: 15px;
+             height:180px;
+             width:500px;
+             margin-left: 350px;
+             background-color: #f5f6f7;
+            } 
+            .card-0 textarea{
+                margin-top: 10px;
+            }
+            .card
+            {
+             margin-top: 15px;
+             height:385px;
+             width:500px;
+             margin-left: 350px;
+             background-color: #fff;
+            }              
+            .commentBox{
+            margin-left: 5px;
+            margin-top: 5px;            
+            }
+            .img4{
+               height: 50px;
+               width: 50px;
+               margin-left: 150px;
+               margin-top: 20px;
+               border-radius:50% ;
+            }
+            .btn{
+               margin-left: 438px;
+            }
+            .postTitle{
+                margin-left: 5px;
+                margin-top: 5px;
+                padding-top: 15px;
+            }
+            .postDescription{
+                margin-left: 5px;
+                margin-top: 5px;
+            }
+            .like{
+                width:30px; 
+                height:30px;
+                margin-right:5px;
+                background-color: #fff;
+                margin-left:20px;
+                border-radius: 50%
+            }
+            .comment{
+                width:30px; 
+                height:30px;
+                background-color: #fff;
+                margin-right:5px;
+                margin-left:100px;
+            }
+            .share{
+                width:30px; 
+                height:30px;
+                background-color: #fff;
+                margin-right:5px;
+                margin-left:100px;
+                border-radius: 50%
+            }
+            .postCommentId{
+                margin-left: 5px;
+                margin-top: 5px;
+            }

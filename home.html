@@ -1,0 +1,64 @@
+<div class="container">
+    <img src="/images/img4.jpg" class="img4"/>
+    <div class="card-0">
+        <div class="form-group">
+            <label for="comment" class="commentBox">Create Post:</label>
+            <textarea class="form-control" rows="3" columns="65" id="comment"></textarea>
+        </div>
+        <button type="button" class="btn">Post</button>
+    </div>
+    <div ng-repeat="info in CompleteData">
+    <div class="card">
+        <p class="postTitle">{{info.postTitle}}</p><hr>
+        <p class="postDescription">{{info.postDescription}}</p><hr>
+        <span><img src="/images/like.png" class="like"></span>
+        <span>{{info.postLikes}}</span>Likes
+        <img src="/images/comment.png" class="comment">Comment
+        <img src="/images/share.png" class="share">share<hr>
+        <div class="form-group">
+                <label for="comment" class="commentBox">Comment:</label>
+                <textarea class="form-control" rows="1" columns="65" id="comment"></textarea>
+              </div>
+        <div ng-repeat="info2 in info.postComments">
+        <span class="postCommentId">{{info2.postCommentId}}</span>
+        <span>:{{info2.postCommentAuthor}}</span>
+        <span>:{{info2.postCommentDescription}}</span>
+        </div>
+    </div>
+    </div>
+ </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
