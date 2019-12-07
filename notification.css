@@ -1,0 +1,19 @@
+.container{
+    background-color: #e9ebee;
+}
+.card0
+{
+ margin-top: 15px;
+ height:25px;
+ width:500px;
+ margin-left: 350px;
+ background-color: #fff;
+}  
+button{
+    height: 24px;
+}
+.cross{
+    height: 10px;
+    width: 10px;
+    margin-left: 10px;
+}
