@@ -1,20 +1,28 @@
 <div class="container">
-    <img src="/images/img4.jpg" class="img4"/>
+    <img src="/images/img4.jpg" class="avatar"/>
+    <!-- directive -->
+    <div ng-directive="directive1">
     <div class="card-0">
         <div class="form-group">
             <label for="comment" class="commentBox">Create Post:</label>
             <textarea class="form-control" rows="3" columns="65" id="comment"></textarea>
         </div>
         <button type="button" class="btn">Post</button>
-    </div>
+    </div></div>
+    <!-- directive -->
     <div ng-repeat="info in CompleteData">
     <div class="card">
+    <div ng-directive="directive2">
         <p class="postTitle">{{info.postTitle}}</p><hr>
-        <p class="postDescription">{{info.postDescription}}</p><hr>
-        <span><img src="/images/like.png" class="like"></span>
-        <span>{{info.postLikes}}</span>Likes
-        <img src="/images/comment.png" class="comment">Comment
-        <img src="/images/share.png" class="share">share<hr>
+        <p class="postDescription">{{info.postDescription}}</p><hr></div>
+        <!-- directive -->
+        <div ng-directive="directive3">
+        <span><img src="/images/like.png" class="avatar2"></span>
+        <span>{{info.postLikes}}</span> Likes
+        <img src="/images/comment.png" class="avatar3">Comment
+        <img src="/images/share.png" class="avatar4">share<hr></div>
+        <!-- directive -->
+        <div ng-directive="directive4">
         <div class="form-group">
                 <label for="comment" class="commentBox">Comment:</label>
                 <textarea class="form-control" rows="1" columns="65" id="comment"></textarea>
@@ -27,6 +35,8 @@
     </div>
     </div>
  </div> 
+</div>
+
 
 
 
