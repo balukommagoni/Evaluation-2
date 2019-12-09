@@ -7,10 +7,14 @@ angular.module('myApp.notification', ['ngRoute'])
   });
 }])
 .controller('notificationCtrl', ['$scope','dispFactory',function($scope,dispFactory) {
-  dispFactory.getdata().then(function (data) {
+  dispFactory.getnotifdata().then(function (data) {
     $scope.CompleteInfo=data.data;
-});
+
     $scope.Remove=function(index1,index2,index3){
       console.log(index1,index2,index3);
     }
-}]);
+});
+}])
+.directive(directive5,function(){
+
+});
