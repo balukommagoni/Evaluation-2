@@ -1,13 +1,13 @@
 <div class="container">
-  <div ng-repeat="info in CompleteInfo">
-    <div ng-repeat="info2 in info.postComments">
-        <div class="card0" ng-style="button">
-                <span class="postCommentId">{{info2.postCommentId}}</span>
-                <span>:{{info2.postCommentAuthor}}</span>
-                <span>:{{info2.postCommentDescription}}</span>
-                <button ng-click="button={background:'lightblue'}">Mark as Read</button>
-                <span><img src="/images/cross.png" class="cross" ng-click="Remove(info2.postCommentId,info2.postCommentAuthor,info2.postCommentDescription)"></span>
-            </div>
+  <div ng-directive="directive5">
+    <div ng-repeat="info in CompleteInfo">
+        <div class="card0" ng-style="{'background-color':info.notificationSeen == true ?  'lightgrey': 'white'}">
+            <span class="postCommentId">{{info.notificationId}}</span>
+            <span>:{{info.notificationMessage}}</span>
+            <span>:{{info.notificationLink}}</span>
+            <span>:{{info.notificationPostId}}</span>
+            <span><img src="/images/cross.png" class="avatar1" ng-click="Remove(info.notificationId,info.notificationMessage,info.notificationPostId)"></span>
         </div>
     </div>
+  </div>
 </div>
