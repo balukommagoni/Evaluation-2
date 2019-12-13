@@ -1,0 +1,33 @@
+    .row-full{
+    width: 430px;
+    height: 110px;
+    background-color: #606e7a; 
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    border-radius: 1%;
+   }
+   .container{
+    height: 130px;
+    background-color: #434d57;
+   }
+   .box{
+    border-radius: 1%;
+    height: 30px;
+    width: 180px;
+    background-color: #434d57;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 7px; 
+    display: block;
+    float: left;
+   }
+   p{
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+    margin-left: 10px;
+    margin-top: 5px !important;
+   }
