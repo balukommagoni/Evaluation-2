@@ -56,40 +56,43 @@
 </directive2>
 <directive3>
   <table class="table">
-    <thead>
-      <tr>
-      <th></th>
-      <th></th>
-      <th>Request ID</th>
-      <th>Task ID</th>
-      <th>Branch</th>
-      <th>Email Subject</th>
-      <th>Transaction Type</th>
-      <th>Recieved On</th>
-      <th>Loading Date</th>
-      <th>Due Date</th>
-      <th>Task Sub Status</th>
-      <th>Assigned To</th>
+      <thead>
+        <tr>
+        <th></th>
+        <th></th>
+        <th>Request ID</th>
+        <th>Task ID</th>
+        <th>Branch</th>
+        <th>Email Subject</th>
+        <th>Transaction Type</th>
+        <th>Recieved On</th>
+        <th>Loading Date</th>
+        <th>Due Date</th>
+        <th>Task Sub Status</th>
+        <th>Assigned To</th>
+        </tr>
+      </thead>
+      <tr ng-repeat="Data in gridData.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage)">
+      <td select='Data'></td>
+      <td><input type="checkbox"></td>
+      <td> {{Data.requestID}} </td>
+      <td> {{Data.taskID}} </td>
+      <td> {{Data.branch}} </td>
+      <td> {{Data.emailSubject}} </td>
+      <td> {{Data.transactionType}} </td>
+      <td> {{Data.recievedOn}} </td>
+      <td> {{Data.loadingDate}} </td>
+      <td> {{Data.dueDate}} </td>
+      <td> {{Data.taskSubStatus}} </td>
+      <td> {{Data.assignedTo}} </td>
       </tr>
-    </thead>
-    <tr ng-repeat="item in gridInfo">
-    <td select="item"></td>
-    <td><input type="checkbox"></td>
-    <td> {{item.requestID}} </td>
-    <td> {{item.taskID}} </td>
-    <td> {{item.branch}} </td>
-    <td> {{item.emailSubject}} </td>
-    <td> {{item.transactionType}} </td>
-    <td> {{item.recievedOn}} </td>
-    <td> {{item.loadingDate}} </td>
-    <td> {{item.dueDate}} </td>
-    <td> {{item.taskSubStatus}} </td>
-    <td> {{item.assignedTo}} </td>
-    </tr>
-    </table>
-    <div data-pagination="" data-num-pages="numOfPages()" 
-  data-current-page="curPage" data-max-size="maxSize"  
-data-boundary-links="true"></div>
+      </table>
+    <pagination  
+        total-items="totalItems" 
+        items-per-page= "itemsPerPage"
+        ng-model="currentPage" 
+        class="pagination-sm">
+    </pagination>
 </directive3>
 </div>
 

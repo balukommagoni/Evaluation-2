@@ -81,7 +81,9 @@
    .table{
      border: 1;
    } 
-  
+   .pagination li:first-child a {
+    margin-left: 550px !important;
+  }
 /* .container{
     background-color: rgb(237, 248, 248);
     display: flex;
