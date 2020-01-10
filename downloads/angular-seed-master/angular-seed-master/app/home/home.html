@@ -1,0 +1,160 @@
+<div ng-app="myApp" ng-controller='homeCtrl'>
+    <div class="container">
+        <directive1>
+        <div class="row-full">
+            <p>Status</p>
+            <div class="box"><p>{{label1}}</p></div>
+            <div class="box"><p>{{label2}}</p></div>
+            <div class="box"><p>{{label3}}</p></div>
+            <div class="box"><p>{{label4}}</p></div>
+        </div>
+        <div class="row-full">
+            <p>Email Status</p>
+            <div class="box"><p>In queue</p></div>
+            <div class="box"><p>sme</p></div>
+            <div class="box"><p>reaching tat</p></div>
+            <div class="box"><p>uncategorized</p></div>
+        </div>
+        <div class="row-full">
+            <p>Queue</p>
+            <div class="box"><p>reaching tat</p></div>
+            <div class="box"><p>crossed tat</p></div>
+            <div class="box"><p>due today</p></div>
+            <div class="box"><p>completed today</p></div>
+        </div>
+        </directive1>
+    </div>
+ <input type='radio' class="tablink" onclick="openPage('RequestTaskSearch')" id="defaultOpen">Request/Task Search</input>&nbsp;
+<input type='radio' class="tablink" onclick="openTab('EmailSearch')">Email Search</input>
+
+<div id="RequestTaskSearch" class="tabcontent"></div>
+<div id="EmailSearch" class="tabcontent"></div>  
+
+<directive2>
+<form>
+  <h5><b>Request Status</b></h5>
+  <div class="multiselect">
+    <div class="selectBox" ng-click="showCheckboxes()">
+      <select>
+        <option>Open</option>
+      </select>
+      <div class="overSelect"></div>
+    </div>
+    <div id="checkboxes">
+      <label for="checkboxValue1">
+        <input type="checkbox" id="checkboxValue1"/>{{checkboxValue1}}</label>
+      <label for="checkboxValue2">
+        <input type="checkbox" id="checkboxValue2"/>{{checkboxValue2}}</label>
+      <label for="checkboxValue3">
+        <input type="checkbox" id="checkboxValue3"/>{{checkboxValue3}}</label>
+    </div>
+  </div>
+</form>
+<button type="button" class="btn btn-success" ng-click="search()">Search</button>
+<button type="button" class="btn btn-default" ng-click="reset()">Reset</button><br><br><br><br><br>
+<button class="btn btn-primary dropdown-toggle" type="button" style="background-color: rgb(177, 174, 174);" data-toggle="dropdown">Action<span class="caret"></span></button>
+</directive2>
+<directive3>
+  <table class="table">
+    <thead>
+      <tr>
+      <th></th>
+      <th></th>
+      <th>Request ID</th>
+      <th>Task ID</th>
+      <th>Branch</th>
+      <th>Email Subject</th>
+      <th>Transaction Type</th>
+      <th>Recieved On</th>
+      <th>Loading Date</th>
+      <th>Due Date</th>
+      <th>Task Sub Status</th>
+      <th>Assigned To</th>
+      </tr>
+    </thead>
+    <tr ng-repeat="item in gridInfo">
+    <td select="item"></td>
+    <td><input type="checkbox"></td>
+    <td> {{item.requestID}} </td>
+    <td> {{item.taskID}} </td>
+    <td> {{item.branch}} </td>
+    <td> {{item.emailSubject}} </td>
+    <td> {{item.transactionType}} </td>
+    <td> {{item.recievedOn}} </td>
+    <td> {{item.loadingDate}} </td>
+    <td> {{item.dueDate}} </td>
+    <td> {{item.taskSubStatus}} </td>
+    <td> {{item.assignedTo}} </td>
+    </tr>
+    </table>
+    <div data-pagination="" data-num-pages="numOfPages()" 
+  data-current-page="curPage" data-max-size="maxSize"  
+data-boundary-links="true"></div>
+</directive3>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">   
+    <button ng-click="cart()" class="btn btn-primary" style="margin-left: 1080px !important;">Cart</button>
+    <span ng-repeat="img in images track by img.image">
+        <div class="card"><input type='checkbox' value='{{ img.image }}' ng-model='img.selected'><div><img src="{{img.image}}" height="200px" width="175px"/></div> <button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="cards">
+    <span class="arrange">
+        <div class="card"><input type="checkbox"/><div><img src="/images/img1.jpg" height="200px" width="175px"/></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/img2.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/img3.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/img4.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/images4.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/images1.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div><br>
+    </span>
+
+    <span class="arrange">
+        <div class="card"><input type="checkbox"/><div><img src="/images/images2.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/images3.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/download.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/download1.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/download2.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
+        <div class="card"><input type="checkbox"/><div><img src="/images/download3.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div><br>
+    </span>
+
+    <span class="arrange">
+        <div class="card"><input type="checkbox"/><div><img src="/images/tshirts.png" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div><br>
+    </span> --> 
