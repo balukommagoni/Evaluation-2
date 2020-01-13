@@ -27,9 +27,6 @@
  <input type='radio' class="tablink" onclick="openPage('RequestTaskSearch')" id="defaultOpen">Request/Task Search</input>&nbsp;
 <input type='radio' class="tablink" onclick="openTab('EmailSearch')">Email Search</input>
 
-<div id="RequestTaskSearch" class="tabcontent"></div>
-<div id="EmailSearch" class="tabcontent"></div>  
-
 <directive2>
 <form>
   <h5><b>Request Status</b></h5>
@@ -55,7 +52,7 @@
 <button class="btn btn-primary dropdown-toggle" type="button" style="background-color: rgb(177, 174, 174);" data-toggle="dropdown">Action<span class="caret"></span></button>
 </directive2>
 <directive3>
-  <table class="table">
+  <table border="1" class="table">
       <thead>
         <tr>
         <th></th>
@@ -95,69 +92,3 @@
     </pagination>
 </directive3>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="container">   
-    <button ng-click="cart()" class="btn btn-primary" style="margin-left: 1080px !important;">Cart</button>
-    <span ng-repeat="img in images track by img.image">
-        <div class="card"><input type='checkbox' value='{{ img.image }}' ng-model='img.selected'><div><img src="{{img.image}}" height="200px" width="175px"/></div> <button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="cards">
-    <span class="arrange">
-        <div class="card"><input type="checkbox"/><div><img src="/images/img1.jpg" height="200px" width="175px"/></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/img2.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/img3.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/img4.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/images4.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/images1.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div><br>
-    </span>
-
-    <span class="arrange">
-        <div class="card"><input type="checkbox"/><div><img src="/images/images2.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/images3.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/download.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/download1.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/download2.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div>
-        <div class="card"><input type="checkbox"/><div><img src="/images/download3.jpg" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div><br>
-    </span>
-
-    <span class="arrange">
-        <div class="card"><input type="checkbox"/><div><img src="/images/tshirts.png" height="200px" width="175px"></div><button ng-click="Addtocart($index)" class="btn btn-success" style="width: 175px;margin-top: -20px;">Add to cart</button></div><br>
-    </span> --> 
