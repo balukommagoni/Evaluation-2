@@ -24,13 +24,13 @@
         </div>
         </directive1>
     </div>
- <input type='radio' class="tablink" onclick="openPage('RequestTaskSearch')" id="defaultOpen">Request/Task Search</input>&nbsp;
-<input type='radio' class="tablink" onclick="openTab('EmailSearch')">Email Search</input>
+<input type='radio' ng-click="RequestTaskSearch()">Request/Task Search&nbsp;
+<input type='radio' ng-click="EmailSearch()">Email Search
 
 <directive2>
 <form>
   <h5><b>Request Status</b></h5>
-  <div class="multiselect">
+  <div class="multiSelect">
     <div class="selectBox" ng-click="showCheckboxes()">
       <select>
         <option>Open</option>
@@ -49,10 +49,11 @@
 </form>
 <button type="button" class="btn btn-success" ng-click="search()">Search</button>
 <button type="button" class="btn btn-default" ng-click="reset()">Reset</button><br><br><br><br><br>
-<button class="btn btn-primary dropdown-toggle" type="button" style="background-color: rgb(177, 174, 174);" data-toggle="dropdown">Action<span class="caret"></span></button>
+<button type="button" class="btn btn-primary dropdown-toggle" ng-click="action()" style="background-color: rgb(177, 174, 174);" data-toggle="dropdown">Action<span class="caret"></span></button>
 </directive2>
+
 <directive3>
-  <table border="1" class="table">
+  <table class="table">
       <thead>
         <tr>
         <th></th>
