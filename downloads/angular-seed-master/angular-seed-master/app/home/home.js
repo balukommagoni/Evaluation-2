@@ -8,11 +8,19 @@ angular.module('myApp.home', ['ngRoute','ui.bootstrap'])
 }])
 .controller('homeCtrl',['$scope',function($scope) {
   $scope.labels=[
-                {label1:'sme'},
-                {label2:'uncategorized'},
-                {label3:'completed today'},
-                {label4:'due today'}
-              ];
+                'due today',
+                'sme',
+                'uncategorized',
+                'completed today',
+                'due today',
+                'sme',
+                'uncategorized',
+                'completed today',
+                'due today',
+                'sme',
+                'uncategorized',
+                'completed today'
+                ];
 
   $scope.checkboxValue1='Open';
   $scope.checkboxValue2='Query';
@@ -62,10 +70,7 @@ angular.module('myApp.home', ['ngRoute','ui.bootstrap'])
       labels:'='
       }, 
       restrict:'E',
-      template: '<div class="box"><p>{{label1}}</p></div>'+
-                '<div class="box"><p>{{label2}}</p></div>'+
-                '<div class="box"><p>{{label3}}</p></div>'+
-                '<div class="box"><p>{{label4}}</p></div>'
+      templateUrl: 'dashlet.html'
   }
 }).directive('directive2',function(){
   return{
