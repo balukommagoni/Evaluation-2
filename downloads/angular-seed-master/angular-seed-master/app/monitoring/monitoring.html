@@ -1,0 +1,73 @@
+<div ng-app="myApp" ng-controller='monitoringCtrl'>
+    <div class="container">
+        <dashletDirective></dashletDirective>
+    </div>
+<input type='radio' ng-click="RequestTaskSearch()">Request/Task Search&nbsp;
+<input type='radio' ng-click="EmailSearch()">Email Search
+
+<searchDirective>
+<form>
+  <h5><b>Request Status</b></h5>
+  <div class="multiSelect">
+    <div class="selectBox" ng-click="showCheckboxes()">
+      <select>
+        <option>Open</option>
+      </select>
+      <div class="overSelect"></div>
+    </div>
+    <div id="checkboxes">
+      <label for="opencheckbox">
+        <input type="checkbox" id="opencheckbox"/>{{opencheckbox}}</label>
+      <label for="querycheckbox">
+        <input type="checkbox" id="querycheckbox"/>{{querycheckbox}}</label>
+      <label for="completedcheckbox">
+        <input type="checkbox" id="completedcheckbox"/>{{completedcheckbox}}</label>
+    </div>
+  </div>
+</form>
+<button type="button" class="btn btn-success" ng-click="search()">Search</button>
+<button type="button" class="btn btn-default" ng-click="reset()">Reset</button><br><br><br><br><br>
+<button type="button" class="btn btn-primary dropdown-toggle" ng-click="action()" style="background-color: rgb(177, 174, 174);" data-toggle="dropdown">Action<span class="caret"></span></button>
+</searchDirective>
+
+<gridDirective>
+  <table class="table">
+      <thead>
+        <tr>
+        <th></th>
+        <th></th>
+        <th>Request ID</th>
+        <th>Task ID</th>
+        <th>Branch</th>
+        <th>Email Subject</th>
+        <th>Transaction Type</th>
+        <th>Recieved On</th>
+        <th>Loading Date</th>
+        <th>Due Date</th>
+        <th>Task Sub Status</th>
+        <th>Assigned To</th>
+        </tr>
+      </thead>
+      <tr ng-repeat="data in gridData.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage)">
+      <td select='data'></td>
+      <td><input type="checkbox"></td>
+      <td> {{data.requestID}} </td>
+      <td> {{data.taskID}} </td>
+      <td> {{data.branch}} </td>
+      <td> {{data.emailSubject}} </td>
+      <td> {{data.transactionType}} </td>
+      <td> {{data.recievedOn}} </td>
+      <td> {{data.loadingDate}} </td>
+      <td> {{data.dueDate}} </td>
+      <td> {{data.taskSubStatus}} </td>
+      <td> {{data.assignedTo}} </td>
+      </tr>
+      </table>
+    <pagination  
+        total-items="totalItems" 
+        items-per-page= "itemsPerPage"
+        ng-model="currentPage" 
+        class="pagination-sm">
+    </pagination>
+</gridDirective>
+</div>
