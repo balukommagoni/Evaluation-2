@@ -1,7 +1,5 @@
-<div ng-app="myApp" ng-controller='monitoringCtrl'>
-    <div class="container">
-        <dashletDirective></dashletDirective>
-    </div>
+<div ng-app="monitoringApp" ng-controller='monitoringController'>
+<div class="container"></div>
 <input type='radio' ng-click="RequestTaskSearch()">Request/Task Search&nbsp;
 <input type='radio' ng-click="EmailSearch()">Email Search
 
@@ -27,7 +25,7 @@
 </form>
 <button type="button" class="btn btn-success" ng-click="search()">Search</button>
 <button type="button" class="btn btn-default" ng-click="reset()">Reset</button><br><br><br><br><br>
-<button type="button" class="btn btn-primary dropdown-toggle" ng-click="action()" style="background-color: rgb(177, 174, 174);" data-toggle="dropdown">Action<span class="caret"></span></button>
+<button type="button" class="btn btn-primary dropdown-toggle" ng-click="action()" style="background-color: rgb(177, 174, 174);" entry-toggle="dropdown">Action<span class="caret"></span></button>
 </searchDirective>
 
 <gridDirective>
@@ -48,19 +46,19 @@
         <th>Assigned To</th>
         </tr>
       </thead>
-      <tr ng-repeat="data in gridData.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage)">
-      <td select='data'></td>
+      <tr ng-repeat="entry in gridData.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage)">
+      <td select='entry'></td>
       <td><input type="checkbox"></td>
-      <td> {{data.requestID}} </td>
-      <td> {{data.taskID}} </td>
-      <td> {{data.branch}} </td>
-      <td> {{data.emailSubject}} </td>
-      <td> {{data.transactionType}} </td>
-      <td> {{data.recievedOn}} </td>
-      <td> {{data.loadingDate}} </td>
-      <td> {{data.dueDate}} </td>
-      <td> {{data.taskSubStatus}} </td>
-      <td> {{data.assignedTo}} </td>
+      <td> {{entry.requestID}} </td>
+      <td> {{entry.taskID}} </td>
+      <td> {{entry.branch}} </td>
+      <td> {{entry.emailSubject}} </td>
+      <td> {{entry.transactionType}} </td>
+      <td> {{entry.recievedOn}} </td>
+      <td> {{entry.loadingDate}} </td>
+      <td> {{entry.dueDate}} </td>
+      <td> {{entry.taskSubStatus}} </td>
+      <td> {{entry.assignedTo}} </td>
       </tr>
       </table>
     <pagination  

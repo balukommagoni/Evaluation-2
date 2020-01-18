@@ -1,24 +1,11 @@
 'use strict';
-angular.module('myApp.myjobs', ['ngRoute'])
+angular.module('monitoringApp.myjobs', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/myjobs', {
     templateUrl: 'myjobs/myjobs.html',
-    controller: 'myjobsCtrl'
+    controller: 'myjobsController'
   });
 }])
-.controller('myjobsCtrl', ['$scope',function() {
-  $scope.dashletlabels=[
-    'due today',
-    'sme',
-    'uncategorized',
-    'completed today',
-    'due today',
-    'sme',
-    'uncategorized',
-    'completed today',
-    'due today',
-    'sme',
-    'uncategorized',
-    'completed today'
-    ];
+.controller('myjobsController', ['$scope',function($scope) {
+  
 }]);

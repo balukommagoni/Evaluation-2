@@ -1,12 +1,12 @@
 'use strict';
-angular.module('myApp.monitoring', ['ngRoute','ui.bootstrap'])
+angular.module('monitoringApp.monitoring', ['ngRoute','ui.bootstrap'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/monitoring', {
     templateUrl: './monitoring/monitoring.html',
-    controller: 'monitoringCtrl'
+    controller: 'monitoringController'
   });
 }])
-.controller('monitoringCtrl',['$scope',function($scope) {
+.controller('monitoringController',['$scope',function($scope) {
 
   $scope.opencheckbox='Open'; 
   $scope.querycheckbox='Query';
@@ -53,26 +53,49 @@ angular.module('myApp.monitoring', ['ngRoute','ui.bootstrap'])
 .directive('dashletDirective',function(){
   return{
     scope:{
-      dashletLabels:'='
+      statusLabels:'=',
+      emailStatusLabels:'=',
+      queueLabels:'='
       }, 
       restrict:'E',
-      controller:'monitoringCtrl',
+      controller:'dashletDirectiveController',
       templateUrl:'dashlet.html'
   }
-}).directive('searchDirective',function(){
+})
+.controller('dashletDirectiveController',['$scope',function($scope){
+  $scope.statuslabels=[
+    'due today',
+    'sme',
+    'uncategorized',
+    'completed today'
+    ];
+  $scope.emailstatuslabels=[
+    'sme',
+    'due today',
+    'uncategorized',
+    'completed today'
+  ];
+  $scope.queuelabels=[
+    'uncategorized',
+    'due today',
+    'sme',
+    'completed today'
+  ];
+}])
+.directive('searchDirective',function(){
   return{
     scope:{
       opencheckbox:'=',
       querycheckbox:'=',
       completedcheckbox:'='
       }, 
-      restrict:'E',
+      restrict:'E'
   }
 }).directive('gridDirective',function(){
   return{
-    scope: {
-      data: '=select'
-  }, 
-      restrict:'E',
+    scope:{
+      entry: '=select'
+      }, 
+      restrict:'E'
   }
 });

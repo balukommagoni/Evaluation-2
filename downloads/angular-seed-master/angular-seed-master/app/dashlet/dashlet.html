@@ -1,21 +1,12 @@
 <div class="row-full">
     <p>Status</p>
-    <div class="box"><p>{{dashletLabels[0]}}</p></div>
-    <div class="box"><p>{{dashletLabels[1]}}</p></div>
-    <div class="box"><p>{{dashletLabels[2]}}</p></div>
-    <div class="box"><p>{{dashletLabels[3]}}</p></div>
+    <div class="box"><p ng-repeat='label in statuslabels'>{{label}}</p></div>
 </div>
 <div class="row-full">
     <p>Email Status</p>
-    <div class="box"><p>{{dashletLabels[4]}}</p></div>
-    <div class="box"><p>{{dashletLabels[5]}}</p></div>
-    <div class="box"><p>{{dashletLabels[6]}}</p></div>
-    <div class="box"><p>{{dashletLabels[7]}}</p></div>
+    <div class="box"><p ng-repeat='label in emailstatuslabels'>{{label}}</p></div>
 </div>
 <div class="row-full">
     <p>Queue</p>
-    <div class="box"><p>{{dashletLabels[8]}}</p></div>
-    <div class="box"><p>{{dashletLabels[9]}}</p></div>
-    <div class="box"><p>{{dashletLabels[10]}}</p></div>
-    <div class="box"><p>{{dashletLabels[11]}}</p></div>
+    <div class="box"><p ng-repeat='label in queuelabels'>{{label}}</p></div>
 </div>
